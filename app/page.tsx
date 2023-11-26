@@ -1,95 +1,164 @@
+"use client"
 import Image from 'next/image'
 import styles from './page.module.css'
+import { Box, Grid, Typography } from '@mui/material'
+import CustomTextField from './Component/Ui/TextField'
+import CustomButton from './Component/Ui/Button'
+import { useRouter } from 'next/navigation'
+import { H6 } from './Component/Ui/Typography'
 
 export default function Home() {
+
+  // admin/dashboard
+
+  const router = useRouter()
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Grid container sx={{
+      justifyContent: 'center',
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    }}>
+
+
+      {/* <Grid container xs={11} sm={11} md={11.5} lg={11.5} sx={{
+        // bgcolor: { xs: 'blue', sm: 'yellow', md: 'orange', lg: 'pink' },
+        alignItems: 'center',
+        py: { xs: 1.3, sm: 1.3, md: 1.5, lg: 2.5 }
+      }}>
+
+        <Typography fontFamily='Poppins' sx={{
+          color: "#FFF",
+          fontSize: { xs: 14, sm: 16, md: 18, lg: 20 },
+          cursor: 'pointer'
+        }}>Logo</Typography>
+
+        <Box
+          component='img'
+          src='Assets/Icons/day.png'
+          sx={{
+            width: { xs: 20, sm: 25, md: 20, lg: 20 },
+            height: { xs: 20, sm: 25, md: 20, lg: 20 },
+            cursor: 'pointer',
+            ml: 'auto'
+          }}
         />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      </Grid> */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+
+      <Grid container xs={11} sm={11} md={11.5} lg={11.5} sx={{
+        bgcolor: '',
+        mt: { md: 10, lg: 9 }
+      }}>
+
+        <Grid container md={6} lg={6} sx={{
+          bgcolor: '', justifyContent: 'center', alignItems: 'center',
+          display: { xs: 'none', sm: 'none', md: 'flex' }
+        }}>
+
+          <Grid
+            md={10} lg={9}
+            component='img'
+            src='Assets/Login/loginImg.png'
+          />
+
+        </Grid>
+
+        <Grid container sm={12} md={6} lg={6} sx={{
+          bgcolor: '',
+          mt: { xs: "10", sm: "12", md: 0 },
+          justifyContent: 'center',
+          alignItems: { xs: 'center', sm: 'center' },
+          height: { xs: '80vh', sm: '90vh', md: '', lg: '' }
+        }}>
+
+          <Grid container sx={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            bgcolor: '',
+            height: 'fit-content'
+
+          }}>
+
+            <Grid container sx={{
+              justifyContent: { xs: 'center', sm: '', md: '', lg: '' }
+            }}>
+              <Typography sx={{
+                color: '#F8F8F8', textAlign: 'center',
+                fontSize: { xs: 13, sm: 18, md: 13, lg: 18 },
+                width: { sm: "80%", md: '80%', lg: '85%' },
+                textShadow: '0px 0px 20px rgba(0, 0, 0, 0.25)',
+                lineHeight: { md: 1.2, lg: 1.4 },
+                my: { sm: 2, md: 0 }
+              }}>
+                "Welcome to the future of restaurant reporting! We're serving up a fresh approach to streamline your restaurant management, making data deliciously easy to digest."
+              </Typography>
+
+
+              <Grid xs={10} sm={8.5} md={10} lg={6} container bgcolor="" sx={{
+                mb: { lg: 6 },
+                mt: { xs: 4, sm: 7, md: 3, lg: 7 },
+                bgcolor: '#2F2F2F',
+                borderRadius: { xs: "15px", sm: "17px", md: '20px' },
+                justifyContent: 'center', alignItems: 'center'
+              }}>
+
+                <Grid container sx={{ bgcolor: "", justifyContent: 'center' }}>
+
+
+                  <CustomTextField
+                    placeHolder="Email"
+                    mt={3.5} />
+
+                  <CustomTextField
+                    placeHolder="Password"
+                    mt={2.5} />
+
+                  <CustomButton onClick={() => router.push('admin/dashboard')}>Login</CustomButton>
+
+                </Grid>
+
+                <H6 my={2} width="70%" fontWeight={400}>
+                  By continuing. you agree to (name)’s Terms of
+                  service and Privacy policy
+                </H6>
+
+              </Grid>
+
+            </Grid>
+
+          </Grid>
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+      </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid >
   )
 }

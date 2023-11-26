@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Grid } from '@mui/material'
+import Header from './Component/Ui/Header'
+import MobileNavBar from './Component/Ui/MobileNavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +19,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <style>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+        </style>
+      </style>
+
+      <body className={inter.className}>
+        <Grid container sx={{ justifyContent: 'center' }}>
+
+          <Header />
+          <MobileNavBar />
+
+          {children}
+        </Grid>
+      </body>
     </html>
   )
 }
