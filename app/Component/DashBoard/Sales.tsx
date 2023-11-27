@@ -59,7 +59,7 @@ export default function Sales(props: any) {
                     sx={{
                         justifyContent: 'center',
                         alignItems: 'center',
-                        display: index != 0 ? 'flex' : 'none'
+                        display: index != 0 ? 'none' : 'flex'
                     }}
 
                 >
@@ -84,7 +84,7 @@ export default function Sales(props: any) {
 
 
                 <Typography sx={{
-                    display: index == 0 ? 'flex' : 'none',
+                    display: index == 0 ? 'none' : 'flex',
                     fontSize: 12,
                     color: '#FFF'
                 }}>
