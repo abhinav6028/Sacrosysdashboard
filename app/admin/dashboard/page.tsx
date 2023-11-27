@@ -18,11 +18,14 @@ export default function page() {
 
 
     return (
-        <Grid container bgcolor="#rgba(20, 20, 20, 0.98)" sx={{ justifyContent: 'center' }}>
+        <Grid container bgcolor="" sx={{
+            justifyContent: 'center', height: '90vh',
+            mt: { xs: '', sm: '', md: '', lg: '' }
+        }}>
 
             <Grid container xs={11} sm={11} md={11} lg={11.5} sx={{
                 bgcolor: 'rgba(20, 20, 20, 0.98)',
-                mt: { xs: 12, sm: 12, md: 4, lg: 4 },
+                mt: { xs: 12, sm: 12, md: 4, lg: 2 },
                 justifyContent: 'space-evenly',
                 flexDirection: ''
             }}>
@@ -95,17 +98,40 @@ export default function page() {
                 justifyContent: { md: 'center', lg: 'space-between' }
             }}>
 
-                <Grid container xs={11} sm={11} md={11} lg={3.8} sx={{
-                    bgcolor: '', mt: 4, justifyContent: 'center', alignItems: 'center',
-                    boxShadow: ' 0px 0px 20px 0px rgba(255, 255, 255, 0.08)',
-                    borderRadius: '12px',
+
+                <Grid container md={11} lg={3.8} sx={{
+                    bgcolor: '',
+                    mt: { xs: 2, sm: 2, md: 4, lg: 4 }
+
                 }}>
 
-                    <RoundedChart />
+                    <RoundedChart
+
+                        title='Least 5 selling product'
+                        triangleDisplay='none'
+                        SourceApi={leastSellingProduct}
+                        display='none'
+                        height={10}
+                        py={0}
+                        borderRadius='0px 6px 6px 0px'
+                    />
+
+                    {/* <SalesComparison
+                        title='Least 5 selling product'
+                        triangleDisplay='none'
+                        SourceApi={leastSellingProduct}
+                        display='none'
+                        height={10}
+                        py={0}
+                        borderRadius='0px 6px 6px 0px'
+                    /> */}
 
                 </Grid>
 
-                {/* <Grid container md={11} lg={3.8} sx={{ bgcolor: '', mt: 4, }}>
+                <Grid container md={11} lg={3.8} sx={{
+                    bgcolor: '',
+                    mt: { xs: 2, sm: 2, md: 4, lg: 4 }
+                }}>
 
                     <SalesComparison
                         title='Least 5 selling product'
@@ -117,23 +143,12 @@ export default function page() {
                         borderRadius='0px 6px 6px 0px'
                     />
 
-                </Grid> */}
-
-                <Grid container md={11} lg={3.8} sx={{ bgcolor: '', mt: 4, }}>
-
-                    <SalesComparison
-                        title='Least 5 selling product'
-                        triangleDisplay='none'
-                        SourceApi={leastSellingProduct}
-                        display='none'
-                        height={10}
-                        py={0}
-                        borderRadius='0px 6px 6px 0px'
-                    />
-
                 </Grid>
 
-                <Grid container md={11} lg={3.8} sx={{ bgcolor: '', mt: 4 }}>
+                <Grid container md={11} lg={3.8} sx={{
+                    bgcolor: '',
+                    mt: { xs: 2, sm: 2, md: 4, lg: 4 }
+                }}>
 
                     <SalesComparison
                         title='Least 5 selling product'

@@ -17,42 +17,16 @@ export default function Home() {
   return (
     <Grid container sx={{
       justifyContent: 'center',
-
+      alignItems: 'center',
+      height: '90vh'
     }}>
-
-
-      {/* <Grid container xs={11} sm={11} md={11.5} lg={11.5} sx={{
-        // bgcolor: { xs: 'blue', sm: 'yellow', md: 'orange', lg: 'pink' },
-        alignItems: 'center',
-        py: { xs: 1.3, sm: 1.3, md: 1.5, lg: 2.5 }
-      }}>
-
-        <Typography fontFamily='Poppins' sx={{
-          color: "#FFF",
-          fontSize: { xs: 14, sm: 16, md: 18, lg: 20 },
-          cursor: 'pointer'
-        }}>Logo</Typography>
-
-        <Box
-          component='img'
-          src='Assets/Icons/day.png'
-          sx={{
-            width: { xs: 20, sm: 25, md: 20, lg: 20 },
-            height: { xs: 20, sm: 25, md: 20, lg: 20 },
-            cursor: 'pointer',
-            ml: 'auto'
-          }}
-        />
-
-      </Grid> */}
-
-
-
 
       <Grid container xs={11} sm={11} md={11.5} lg={11.5} sx={{
         bgcolor: '',
-        mt: { md: 10, lg: 9 }
+        // mt: { md: 10, lg: 15 }
       }}>
+
+
 
         <Grid container md={6} lg={6} sx={{
           bgcolor: '', justifyContent: 'center', alignItems: 'center',
@@ -66,6 +40,13 @@ export default function Home() {
           />
 
         </Grid>
+
+
+
+
+
+
+
 
         <Grid container sm={12} md={6} lg={6} sx={{
           bgcolor: '',

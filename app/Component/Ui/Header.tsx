@@ -11,8 +11,6 @@ export default function Header() {
 
     const router = useRouter()
 
-    console.log("pathName?????????????///", pathName);
-
     const HeadrItems = [
         { name: 'Dashboard', path: '/admin/dashboard' },
         { name: 'Sales', path: '/admin/sales' },
@@ -22,15 +20,15 @@ export default function Header() {
         { name: 'Purchase entry', path: '/admin/purchaseentry' },
     ]
 
-    const one = HeadrItems.filter((data, index) => pathName == HeadrItems.path)
 
-    console.log("one????????????", one);
+
+
 
 
 
     return (
         <Grid container xs={11} sm={11} md={11.5} lg={11.5} sx={{
-            // bgcolor: { xs: '', sm: 'blue    ', md: 'orange', lg: 'blue' },
+            bgcolor: '#141414',
             alignItems: 'center',
             py: { xs: 1.3, sm: 1.3, md: 1.5, lg: 1 },
 
@@ -41,7 +39,7 @@ export default function Header() {
         }}>
 
             <Grid md={2} lg={2} sx={{
-                bgcolor: '', display: 'flex', alignItems: 'center'
+                bgcolor: '#141414', display: 'flex', alignItems: 'center'
             }}>
 
                 <IconsComponent
@@ -60,7 +58,7 @@ export default function Header() {
 
 
             <Grid container md={7} lg={5} sx={{
-                bgcolor: '',
+                bgcolor: '#141414',
                 // ml: { md: 1, lg: 6 },
                 justifyContent: 'space-between',
                 display: pathName === '/' ? 'none' : ''
@@ -72,7 +70,7 @@ export default function Header() {
                         return (
 
                             <H3
-                                onClick={() => router.push(`${data.pathc}`)}
+                                onClick={() => router.push(`${data.path}`)}
                                 hoverFontWeight={600} py={1.4} px={1.2}
                                 fontWeight={data.path === pathName ? '600' : ''}
                                 color={data.path === pathName ? 'black' : ''}

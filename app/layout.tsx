@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 import { Grid } from '@mui/material'
 import Header from './Component/Ui/Header'
 import MobileNavBar from './Component/Ui/MobileNavBar'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  weight: ["100", '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,7 +31,7 @@ export default function RootLayout({
         </style>
       </style>
 
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Grid container sx={{ justifyContent: 'center' }}>
 
           <Header />

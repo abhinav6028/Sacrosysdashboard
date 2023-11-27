@@ -16,14 +16,15 @@ export default function Totals(props: any) {
             boxShadow: '0px 0px 20px 0px rgba(255, 255, 255, 0.08)',
         }} sm={5.5} md={5.5} lg={2.5}>
 
-            <H7 fontWeight="600" textAlign='center' width="100%" mt={2}>{title}</H7>
+            <H7 fontWeight="600" width="100%" mt={2} >
+                {title}
+            </H7>
 
             <Grid container justifyContent="space-evenly" sx={{}}>
 
+                <Box sx={{ my: { xs: 2, sm: 1, md: 1 }, alignItems: '' }}>
 
-                <Box sx={{ my: { xs: 2, sm: 1, md: 1 } }}>
-
-                    <H7 >Cash / 23</H7>
+                    <H7>Cash / 23</H7>
 
                     <Box sx={{
                         display: 'flex', height: 'fit-content',

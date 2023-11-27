@@ -47,8 +47,9 @@ export default function MobileNavBar() {
                 py: 1,
                 position: "fixed",
                 zIndex: "110", top: "0", left: "0",
+                bgcolor: '#141414',
                 // bgcolor: "#FFF",
-                bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
+                // bgcolor: { xs: 'red', sm: 'blue', md: 'green', lg: 'pink', }
             }} >
 
 
@@ -75,8 +76,8 @@ export default function MobileNavBar() {
                     bgcolor: ''
                 }}>
 
-                    {menu ? <CloseIcon sx={{ ml: 2, color: "#513328", fontSize: { xs: '2rem' } }} onClick={() => setMenu(!menu)} /> :
-                        <MenuIcon sx={{ ml: 2, color: "#513328", fontSize: "2rem" }} onClick={() => setMenu(!menu)} />}
+                    {menu ? <CloseIcon sx={{ ml: 2, color: "#FFF", fontSize: { xs: '2rem' } }} onClick={() => setMenu(!menu)} /> :
+                        <MenuIcon sx={{ ml: 2, color: "#FFF", fontSize: "2rem" }} onClick={() => setMenu(!menu)} />}
 
                 </Box>
 
@@ -85,7 +86,7 @@ export default function MobileNavBar() {
             <Box sx={{
                 transition: "0.5s",
                 width: "100%", height: "fit-content",
-                position: "fixed", zIndex: "100", left: "0%", top: menu ? "60px" : "-40%",
+                position: "fixed", zIndex: "100", left: "0%", top: menu ? "50px" : "-50%",
                 bgcolor: "#FFF"
 
             }}>
