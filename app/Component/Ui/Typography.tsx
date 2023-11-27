@@ -45,7 +45,7 @@ export const H3 = (props: any) => {
         <Typography
             onClick={onClick}
             sx={{
-                width: width,
+                width: width ? width : 'fit-content',
                 bgcolor: bgcolor,
                 color: color ? color : "#FFF",
                 fontWeight: fontWeight ? fontWeight : 400,
@@ -55,7 +55,8 @@ export const H3 = (props: any) => {
                 py: { md: py - .4, lg: py },
                 px: { md: px, lg: px },
                 mt: mt, height: 'fit-vontent',
-                mb: { xs: mb, sm: mb, md: mb - .2, lg: mb }, width: 'fit-content',
+                mb: { xs: mb, sm: mb, md: mb - .2, lg: mb },
+
                 '&:hover': {
                     fontWeight: hoverFontWeight ? hoverFontWeight : 'normal'
                 },
