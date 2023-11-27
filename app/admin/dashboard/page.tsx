@@ -1,7 +1,7 @@
 "use client"
 import Sales from '@/app/Component/DashBoard/Sales'
 import SalesComparison from '@/app/Component/DashBoard/SalesComparison'
-import Totals from '@/app/Component/DashBoard/totals'
+import Totals from '@/app/Component/DashBoard/Totals'
 import RoundedChart from '@/app/Component/Ui/Chart/RoundedChart'
 import SmoothLineChart from '@/app/Component/Ui/Chart/SmoothLineChart'
 import { expences, salesRate, saleSourceApi, topSellingProduct, leastSellingProduct } from '@/utils/mockapi'
@@ -79,14 +79,17 @@ export default function page() {
                 </Grid>
 
 
-                <Grid container xs={12} sx={11} md={7} lg={4.8} sx={{
-                    justifyContent: 'center', alignItems: 'center',
-                    borderRadius: '12px',
-                    boxShadow: '0px 0px 20px 0px rgba(255, 255, 255, 0.08)',
-                }}>
+                <Grid container xs={12} sm={11} md={7} lg={4.8}
+                    sx={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        borderRadius: '12px',
+                        boxShadow: '0px 0px 20px 0px rgba(255, 255, 255, 0.08)',
+                    }}
+                >
 
                     <SmoothLineChart />
-                    {/* <SmoothLineChart /> */}
+
 
 
                 </Grid>

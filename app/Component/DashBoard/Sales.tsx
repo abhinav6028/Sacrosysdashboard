@@ -12,12 +12,15 @@ export default function Sales(props: any) {
         // <Grid container xs={12} md={7} lg={7} sx={{ bgcolor: 'rgba(20, 20, 20, 0.98)', justifyContent: 'space-between' }}>
 
         <Grid container
+        
             md={index <= 1 ? 5.5 : 4}
             sm={index <= 1 ? 5.5 : 4}
             xs={index <= 1 ? 5.5 : 4}
             lg={2.4}
+
             sx={{
-                height: 'fir-content', py: { xs: 2, sm: 2, md: 4, lg: 2 },
+                height: 'fir-content',
+                py: { xs: 2, sm: 2, md: 4, lg: 2 },
                 mt: { xs: index > 1 && 2, md: index > 1 && 2, lg: 0 },
                 boxShadow: '0px 0px 20px 0px rgba(255, 255, 255, 0.08)',
                 borderRadius: '12px',
