@@ -22,11 +22,9 @@ export default function Home() {
     }}>
 
       <Grid container xs={11} sm={11} md={11.5} lg={11.5} sx={{
-        bgcolor: '',
+
         // mt: { md: 10, lg: 15 }
       }}>
-
-
 
         <Grid container md={6} lg={6} sx={{
           bgcolor: '', justifyContent: 'center', alignItems: 'center',
@@ -41,13 +39,6 @@ export default function Home() {
 
         </Grid>
 
-
-
-
-
-
-
-
         <Grid container sm={12} md={6} lg={6} sx={{
           bgcolor: '',
           mt: { xs: "10", sm: "12", md: 0 },
@@ -60,6 +51,7 @@ export default function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             bgcolor: '',
+            mt: { xs: -5, sm: -2, md: '', lg: 0 },
             height: 'fit-content'
 
           }}>
